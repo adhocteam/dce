@@ -39,7 +39,7 @@ variable "reset_nuke_template_bucket" {
 
 variable "reset_nuke_template_key" {
   description = "S3 bucket object key for the nuke configuration template. Use this to override the default nuke configuration."
-  default     = "STUB"
+  default     = "opslab-nuke-config-template.yml"
 }
 
 variable "reset_build_image" {
@@ -219,7 +219,10 @@ variable "principal_budget_period" {
 variable "allowed_regions" {
   type = list(string)
   default = [
-    "us-east-1"
+    "us-east-1",
+    "us-east-2",
+    "us-west-1",
+    "us-west-2"
   ]
   description = "List of AWS regions which DCE Principals have access to. These regions will also be targeted for reset in nuke.yml."
 }
