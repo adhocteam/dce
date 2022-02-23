@@ -39,7 +39,7 @@ variable "reset_nuke_template_bucket" {
 
 variable "reset_nuke_template_key" {
   description = "S3 bucket object key for the nuke configuration template. Use this to override the default nuke configuration."
-  default     = "opslab-nuke-config-template.yml"
+  default     = "STUB"
 }
 
 variable "reset_build_image" {
